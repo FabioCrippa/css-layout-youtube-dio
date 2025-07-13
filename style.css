@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0f0f0f;
+    --surface-dark: #212121;
+    --hover-dark: #3e3e3e;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --youtube-red: #ff0000;
+    --border-color: #303030;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-btn {
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.menu-btn:hover {
+    background-color: var(--hover-dark);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    color: var(--youtube-red);
+    font-size: 24px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 640px;
+    margin: 0 40px;
+}
+
+.search-container {
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0 16px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-right: none;
+    color: var(--text-primary);
+    font-size: 16px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #1c62b9;
+}
+
+.search-btn {
+    width: 64px;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 0 20px 20px 0;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    background-color: var(--hover-dark);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-btn,
+.profile-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.icon-btn:hover,
+.profile-btn:hover {
+    background-color: var(--hover-dark);
+}
+
+/* Layout principal */
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: var(--bg-dark);
+    height: calc(100vh - 56px);
+    position: fixed;
+    top: 56px;
+    left: 0;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-nav {
+    padding: 12px 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 24px;
+    transition: background-color 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: var(--hover-dark);
+}
+
+.sidebar-link.active {
+    background-color: var(--hover-dark);
+    font-weight: 500;
+}
+
+.sidebar-link .icon {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+.content {
+    flex: 1;
+    margin-left: 240px;
+    padding: 20px;
+    min-height: calc(100vh - 56px);
+}
+
+/* Grid de vídeos */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-2px);
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Estilos específicos para iframes do YouTube */
+.video-thumbnail iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+/* Ajuste para hover nos cards com iframe */
+.video-card:hover .video-thumbnail iframe {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+.video-info {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.video-details {
+    flex: 1;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.channel-name {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.video-stats {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+    }
+    
+    .content {
+        margin-left: 0;
+        padding: 16px;
+    }
+    
+    .header-center {
+        margin: 0 16px;
+    }
+    
+    .videos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+    }
+
+    .video-thumbnail iframe {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-center {
+        display: none;
+    }
+    
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .content {
+        padding: 12px;
+    }
+    
+    .video-thumbnail iframe {
+        min-height: 160px;
+    }
+}
