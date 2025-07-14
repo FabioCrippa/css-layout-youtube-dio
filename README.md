@@ -38,7 +38,6 @@ Este projeto é um clone fiel da interface do YouTube, desenvolvido para pratica
 ### Frontend
 - **HTML5**: Estrutura semântica e acessível
 - **CSS3**: Estilização moderna com variáveis CSS
-- **JavaScript**: Interatividade e funcionalidades dinâmicas
 
 ### Técnicas CSS Avançadas
 - **CSS Grid**: Layout responsivo de vídeos
@@ -82,41 +81,6 @@ Este projeto é um clone fiel da interface do YouTube, desenvolvido para pratica
    - Layout responsivo com `auto-fit`
    - Cards com proporção 16:9
    - Informações do canal e estatísticas
-
-## 📺 Vídeos Incluídos
-
-| Vídeo | Canal | Tema |
-|-------|-------|------|
-| Complete Web Development Course | Traversy Media | Desenvolvimento Web |
-| Learn JavaScript - Full Course | freeCodeCamp.org | JavaScript |
-| Git Tutorial for Beginners | Programming with Mosh | Controle de Versão |
-| HTML CSS JavaScript Tutorial | freeCodeCamp.org | Front-end |
-| JavaScript ES6, ES7, ES8 | Traversy Media | JavaScript Moderno |
-| CSS Flexbox Tutorial | Net Ninja | CSS Layout |
-
-## 💻 Como Usar
-
-### Pré-requisitos
-- Navegador web moderno
-- Conexão com internet (para carregar vídeos)
-
-### Instalação
-1. Clone ou baixe o repositório
-```bash
-git clone https://github.com/seu-usuario/css-layout-youtube-dio.git
-```
-
-2. Abra o arquivo `index.html` no seu navegador
-```bash
-# No Windows
-start index.html
-
-# No Mac
-open index.html
-
-# No Linux
-xdg-open index.html
-```
 
 ## 🎓 Conceitos Aprendidos
 
@@ -166,20 +130,6 @@ Este projeto foi desenvolvido como parte do **Bootcamp Santander 2025** da **Dig
 ```
 📱 Layout otimizado com sidebar oculta
 ```
-
-## 🤝 Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-
-1. Fazer um fork do projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abrir um Pull Request
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ## 👨‍💻 Autor
 
